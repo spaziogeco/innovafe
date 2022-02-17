@@ -1,56 +1,77 @@
 <template lang="html">
   <header class="header__site">
-    <div class="nav__menu">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div class="logo__site">
+      <router-link to="/home">
+        <img src="@/assets/img/logo.jpg" alt="">
+      </router-link>
     </div>
-    <div id="hamburger__menu" onclick="hamburger()">
-      <span class="line"></span>
-      <span class="line"></span>
-      <span class="line"></span>
+    <div class="nav__menu">
+      <router-link to="/login">Login</router-link>
+
+    </div>
+    <div id="hamburger__menu">
+      <span class="line color__bg"></span>
+      <span class="line color__bg"></span>
+      <span class="line color__bg"></span>
     </div>
     <div class="float__menu">
+      <h2 class="title__float">MVSA</h2>
+      <!--figure>
+        <img src="@/assets/img/logo.svg" alt="">
+        <h2>MVSA</h2>
+      </figure-->
       <ul>
-        <li>Lorem ipsum</li>
-        <li>Lorem ipsum</li>
-        <li>Lorem ipsum</li>
-        <li>Lorem ipsum</li>
-        <li>Lorem ipsum</li>
+        <li><router-link to="/home">Home</router-link></li>
+        <li><router-link to="/regole">Le regole</router-link></li>
+        <li><router-link to="/classifica">Classifica</router-link></li>
+        <li><router-link to="/museo">Il museo</router-link></li>
+        <li><router-link to="/contatti">Contatti</router-link></li>
       </ul>
     </div>
   </header>
 </template>
 
 <script>
-function hamburger() {
-   var element = document.getElementById("hamburger__menu");
-   element.classList.add("is-active");
+export default {
+  mounted () {
+    AOS.init();
+    $('#hamburger__menu').click(function(){
+      $(this).toggleClass('is-active');
+      $('.float__menu').toggleClass('active');
+    });
+  }
 }
-export default {}
 </script>
 
 <style lang="css" scoped>
 .header__site{
-  width: calc(100% - 20px);
+  /* width: calc(100% - 20px); */
+  width: 100%;
+  transition: all .2s linear;
   margin: auto;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   height: 90px;
-  background: #fff;
+  /* background: rgb(255 255 255 / 85%);
+  background: rgb(31 81 82 / 89%); */
   top: 0;
-  box-shadow: 0 4px 18px rgb(0 0 0 / 10%);
+  /* box-shadow: 0 4px 18px rgb(0 0 0 / 10%); */
   position: -webkit-sticky;
   position: sticky;
   display: flex;
   align-items: center;
   justify-content: end;
   box-sizing: border-box;
-  padding: 15px;
+  padding: 15px 60px;
+  z-index: 999;
+
 }
 
 .header__site a{
   text-decoration: none;
   color: inherit;
   font-weight: 600;
+  text-transform: uppercase;
+  color: #fff;
 }
 
 .nav__menu{
@@ -60,13 +81,13 @@ export default {}
 #hamburger__menu .line{
   width: 50px;
   height: 5px;
-  background-color: #ff6900;
   border-radius: 10px;
   display: block;
   margin: 8px auto;
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  pointer-events: none;
 }
 
 #hamburger__menu:hover{
@@ -129,14 +150,44 @@ export default {}
   position: fixed;
   height: 100vh;
   width: 300px;
-  right: -100%;
+  left: -100%;
   top: 0;
-  background: red;
-  transition: all .2s linear;
+  background: #fff;
+  padding: 50px;
+  transition: all .7s ease-out;
+  box-shadow: 0 4px 18px rgb(0 0 0 / 10%);
+  /* border-radius: 0px 0px 30px 0px; */
+  box-sizing: border-box;
+  z-index: 999;
 }
 
 .float__menu.active{
-  right: 0;
+  left: 0;
+}
+
+.float__menu a{
+  font-size: 18px;
+  line-height: 1;
+  margin-bottom: 25px;
+  display: block;
+  font-weight: 400;
+  color: #035d8b;
+}
+
+.float__menu .title__float{
+  font-size: 50px;
+  text-align: left;
+  margin-bottom: 35px;
+  color: #035d8b;
+}
+
+.logo__site{
+  max-width: 70px;
+  margin-right: auto;
+}
+
+.logo__site img{
+  max-width: 100%;
 }
 
 </style>

@@ -1,13 +1,34 @@
 <template>
   <div id="app">
-
+    <div class="inner__bg__animation"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin:auto;background:#dddddd;display:block;z-index:1;position:relative" width="1440" height="738" preserveAspectRatio="xMidYMid" viewBox="0 0 1440 738">
+      <g transform="translate(720,369) scale(1,1) translate(-720,-369)"><linearGradient id="lg-0.21471339074220808" x1="0" x2="1" y1="0" y2="0">
+        <stop stop-color="#272727" offset="0"></stop>
+        <stop stop-color="#fff9f5" offset="1"></stop>
+      </linearGradient><path d="" fill="url(#lg-0.21471339074220808)" opacity="0.4">
+        <animate attributeName="d" dur="10s" repeatCount="indefinite" keyTimes="0;0.333;0.667;1" calcmod="spline" keySplines="0.2 0 0.2 1;0.2 0 0.2 1;0.2 0 0.2 1" begin="0s" values="M0 0L 0 607.4435961996516Q 144 591.3445022355672  288 570.8682603957863T 576 493.0988154457058T 864 490.63812787514706T 1152 434.1276394422437T 1440 267.3213734503747L 1440 0 Z;M0 0L 0 640.0524572764072Q 144 643.2037790498994  288 619.2515552733213T 576 509.8435616939833T 864 377.12836476534846T 1152 314.2809042260345T 1440 314.39101356317104L 1440 0 Z;M0 0L 0 643.8673066378519Q 144 580.1478346454095  288 548.5200113786528T 576 596.9463771686178T 864 475.5389073426213T 1152 348.1394612311767T 1440 262.94113063985907L 1440 0 Z;M0 0L 0 607.4435961996516Q 144 591.3445022355672  288 570.8682603957863T 576 493.0988154457058T 864 490.63812787514706T 1152 434.1276394422437T 1440 267.3213734503747L 1440 0 Z"></animate>
+      </path><path d="" fill="url(#lg-0.21471339074220808)" opacity="0.4">
+        <animate attributeName="d" dur="10s" repeatCount="indefinite" keyTimes="0;0.333;0.667;1" calcmod="spline" keySplines="0.2 0 0.2 1;0.2 0 0.2 1;0.2 0 0.2 1" begin="-2s" values="M0 0L 0 711.1923189920591Q 144 630.8298670550034  288 609.6843967121257T 576 577.1306920964066T 864 499.0333920921032T 1152 359.8184819087191T 1440 249.30789154312322L 1440 0 Z;M0 0L 0 616.298500963064Q 144 645.0034075095483  288 621.6266106451886T 576 559.4083739145417T 864 454.9134107893465T 1152 396.8854584151053T 1440 318.8294596154062L 1440 0 Z;M0 0L 0 678.5243367182117Q 144 609.6967193307257  288 586.6192275639221T 576 525.5396520597102T 864 422.8398065034506T 1152 362.9599132100822T 1440 321.213568012886L 1440 0 Z;M0 0L 0 711.1923189920591Q 144 630.8298670550034  288 609.6843967121257T 576 577.1306920964066T 864 499.0333920921032T 1152 359.8184819087191T 1440 249.30789154312322L 1440 0 Z"></animate>
+      </path><path d="" fill="url(#lg-0.21471339074220808)" opacity="0.4">
+        <animate attributeName="d" dur="10s" repeatCount="indefinite" keyTimes="0;0.333;0.667;1" calcmod="spline" keySplines="0.2 0 0.2 1;0.2 0 0.2 1;0.2 0 0.2 1" begin="-4s" values="M0 0L 0 684.9892605444039Q 144 690.54805598045  288 658.6947306200134T 576 525.9291045652528T 864 469.169566045437T 1152 350.8500943747482T 1440 251.60874332927932L 1440 0 Z;M0 0L 0 680.9212196151105Q 144 637.1673217318231  288 623.6171437444323T 576 553.1806872017502T 864 445.5974383110521T 1152 372.2115590167555T 1440 275.58000666639407L 1440 0 Z;M0 0L 0 695.9387116950678Q 144 577.4096553133015  288 556.5380751687121T 576 515.4146692529371T 864 409.8005783809426T 1152 374.5303898382929T 1440 376.4666746522671L 1440 0 Z;M0 0L 0 684.9892605444039Q 144 690.54805598045  288 658.6947306200134T 576 525.9291045652528T 864 469.169566045437T 1152 350.8500943747482T 1440 251.60874332927932L 1440 0 Z"></animate>
+      </path><path d="" fill="url(#lg-0.21471339074220808)" opacity="0.4">
+        <animate attributeName="d" dur="10s" repeatCount="indefinite" keyTimes="0;0.333;0.667;1" calcmod="spline" keySplines="0.2 0 0.2 1;0.2 0 0.2 1;0.2 0 0.2 1" begin="-6s" values="M0 0L 0 636.1659637481263Q 144 594.2353925010486  288 558.1247528967184T 576 527.1893870020274T 864 434.2393466245647T 1152 350.8881368950105T 1440 282.5923048746383L 1440 0 Z;M0 0L 0 654.228395828369Q 144 695.2955571692305  288 670.5034358920391T 576 606.9903032726436T 864 539.1060343841411T 1152 458.0148804878062T 1440 408.0505050645048L 1440 0 Z;M0 0L 0 703.126370206124Q 144 643.6725435315412  288 607.547571854995T 576 602.1580938278296T 864 415.51954074786204T 1152 458.28810111994466T 1440 382.4016307185072L 1440 0 Z;M0 0L 0 636.1659637481263Q 144 594.2353925010486  288 558.1247528967184T 576 527.1893870020274T 864 434.2393466245647T 1152 350.8881368950105T 1440 282.5923048746383L 1440 0 Z"></animate>
+      </path><path d="" fill="url(#lg-0.21471339074220808)" opacity="0.4">
+        <animate attributeName="d" dur="10s" repeatCount="indefinite" keyTimes="0;0.333;0.667;1" calcmod="spline" keySplines="0.2 0 0.2 1;0.2 0 0.2 1;0.2 0 0.2 1" begin="-8s" values="M0 0L 0 672.896091262435Q 144 691.5506199899969  288 661.635175965495T 576 477.7038159918668T 864 457.8548666923515T 1152 422.4439379579403T 1440 262.2915723829194L 1440 0 Z;M0 0L 0 709.102812166968Q 144 594.7768260130136  288 571.413280435935T 576 584.1956958317131T 864 429.6624260123217T 1152 349.7768344575334T 1440 349.3857500765331L 1440 0 Z;M0 0L 0 727.5764874174341Q 144 581.9434225410367  288 532.0030424710783T 576 475.969747650883T 864 425.34036036994075T 1152 321.7715128807632T 1440 348.49146544434967L 1440 0 Z;M0 0L 0 672.896091262435Q 144 691.5506199899969  288 661.635175965495T 576 477.7038159918668T 864 457.8548666923515T 1152 422.4439379579403T 1440 262.2915723829194L 1440 0 Z"></animate>
+      </path></g>
+      </svg>
+    </div>
+    <!--div class="container__line">
+      <span class="line__left"></span>
+      <span class="line__right"></span>
+    </div-->
     <router-view/>
   </div>
 </template>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600&display=swap');
+@import './assets/css/bootstrap-grid.min.css';
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -27,7 +48,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 }
 body {
 	line-height: 1;
-  font-family: 'Work Sans', sans-serif;
+  /* font-family: 'Work Sans', sans-serif; */
 }
 ol, ul {
 	list-style: none;
@@ -59,4 +80,166 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+body{
+  /* background: #272727; */
+  /* background: #1f5153; */
+  background: #005d88;
+  position: relative;
+  /* background: rgb(255,255,255);
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(39,39,39,1) 20%, rgba(39,39,39,1) 100%); */
+  font-family: 'Poppins', sans-serif;
+  transition: background 1s linear;
+  overflow-x: hidden;
+  cursor: none;
+}
+
+/* body:after{
+  content: '';
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);;
+  border: 10px solid #fff;
+  z-index: 99999;
+  position: absolute;
+  top: 0;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+} */
+
+/* body.scroll{
+  background: #fff;
+} */
+
+/* body.scroll footer{
+  background: #000;
+  color: #fff;
+}
+
+body.scroll .color__bg{
+  background: #000;
+}
+
+body.scroll .color__text{
+  color: #000;
+} */
+
+body.scroll .header__site{
+  background: #035d8b;
+}
+
+footer,
+.color__bg{
+  background: #fff;
+}
+.color__text{
+  color: #fff;
+}
+
+.base__text{
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 100;
+}
+
+.text__normal{
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 2;
+  color: #fff;
+  margin-bottom: 35px;
+}
+
+.container__line{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.container__line .line__right,
+.container__line .line__left{
+  height: 100%;
+  width: 1px;
+  background: #fff;
+  left: 15px;
+  position: absolute;
+}
+
+.container__line .line__right{
+  left: initial !important;
+  right: 15px;
+}
+
+body .mouse{
+  width: 70px;
+    height: 70px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.1);
+    position: fixed;
+    z-index: 3051;
+    pointer-events: none;
+    mix-blend-mode: exclusion;
+}
+
+body .mouse-center {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+    transition: all 0.075s;
+    z-index: 3051;
+    pointer-events: none;
+    mix-blend-mode: exclusion;
+}
+
+.inner__bg__animation{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  mix-blend-mode: soft-light;
+  transform: scale(2);
+}
+
+.container-fluid,
+.container{
+  width: auto !important;
+}
+
 </style>
+<script>
+export default {
+  mounted () {
+    alert('ATTENZIONE!! questa è una bozza\nIl sito è ancora in sviluppo\nLe pagine il layout e i testi non sono definitivi!')
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+        if (scroll >= 200) {
+            $("body").addClass("scroll");
+        }else{
+            $("body").removeClass("scroll");
+        }
+    }); //missing );
+
+    if (!$('.mouse').length) {
+  $('<div class="mouse"></div><div class="mouse-center"></div>').insertAfter('#app');
+  $(document).on('mousemove', function(e) {
+    $('.mouse').css({'top': (e.clientY-30)+'px', 'left': (e.pageX-30)+'px'});
+    $('.mouse-center').css({'top': (e.clientY+0)+'px', 'left': (e.pageX+0)+'px'});
+  });
+}
+
+
+
+  }
+}
+
+
+</script>

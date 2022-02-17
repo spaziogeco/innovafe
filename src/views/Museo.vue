@@ -1,0 +1,59 @@
+<template lang="html">
+  <main class="main">
+    <Header></Header>
+    <HeaderSection></HeaderSection>
+    <div class="container container__regole">
+      <div class="row" style="margin-bottom:50px;">
+        <div class="col-md-12">
+          <p class="text__normal" data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+      </div>
+      <div class="row" style="margin-bottom:50px;">
+        <div class="col-md-12">
+          <img data-aos="fade-up" style="width:100%;height:450px;object-fit:cover" src="https://fakeimg.pl/500x450/?text=MVSA">
+        </div>
+      </div>
+      <div class="row" style="margin-bottom:50px;">
+        <div class="col-md-12">
+          <p class="text__normal" data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+      </div>
+      <div class="row" style="margin-bottom:50px;">
+        <div class="col-md-6">
+          <img data-aos="flip-left" style="width:100%" src="https://fakeimg.pl/500x500/?text=MVSA">
+        </div>
+        <div class="col-md-6">
+          <p class="text__normal" data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p class="text__normal" data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+      </div>
+      <div class="row" style="margin-bottom:50px;">
+        <div class="col-md-12">
+          <p class="text__normal" data-aos="fade-up">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+      </div>
+    </div>
+    <Footer></Footer>
+  </main>
+</template>
+
+<script>
+// @ is an alias to /src
+import Header from '@/components/header.vue'
+import HeaderSection  from '@/components/title-section.vue'
+import Footer  from '@/components/footer.vue'
+import Content  from '@/components/content.vue'
+export default {
+  components: {
+    Header,
+    HeaderSection,
+    Footer,
+  }
+}
+</script>
+
+<style lang="css" scoped>
+.container__regole .row{
+  align-items: center;
+}
+</style>
