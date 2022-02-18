@@ -29,7 +29,7 @@
 
 .container__login{
   height: calc(100vh - 90px);
-  width: 100vh;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;

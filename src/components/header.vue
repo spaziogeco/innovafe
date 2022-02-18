@@ -159,10 +159,12 @@ export default {
   /* border-radius: 0px 0px 30px 0px; */
   box-sizing: border-box;
   z-index: 999;
+  visibility: hidden;
 }
 
 .float__menu.active{
   left: 0;
+  visibility: visible;
 }
 
 .float__menu a{
