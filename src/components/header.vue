@@ -23,7 +23,8 @@
       <ul>
         <li><router-link to="/home">Home</router-link></li>
         <li><router-link to="/regole">Le regole</router-link></li>
-        <li><router-link to="/classifica">Classifica</router-link></li>
+        <li><router-link to="/classifica">Classifica globale</router-link></li>
+        <li><a href="#">Classfica locale</a>
         <li><router-link to="/museo">Il museo</router-link></li>
         <li><router-link to="/contatti">Contatti</router-link></li>
       </ul>
@@ -34,7 +35,6 @@
 <script>
 export default {
   mounted () {
-    AOS.init();
     $('#hamburger__menu').click(function(){
       $(this).toggleClass('is-active');
       $('.float__menu').toggleClass('active');

@@ -1,6 +1,5 @@
 <template lang="html">
   <main class="main">
-    <Header></Header>
     <HeaderSection></HeaderSection>
     <div class="container container__regole">
       <div class="row" style="margin-bottom:50px;">
@@ -32,21 +31,16 @@
         </div>
       </div>
     </div>
-    <Footer></Footer>
   </main>
 </template>
 
 <script>
 // @ is an alias to /src
-import Header from '@/components/header.vue'
 import HeaderSection  from '@/components/title-section.vue'
-import Footer  from '@/components/footer.vue'
 import Content  from '@/components/content.vue'
 export default {
   components: {
-    Header,
     HeaderSection,
-    Footer,
   }
 }
 </script>

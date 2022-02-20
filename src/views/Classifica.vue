@@ -1,6 +1,5 @@
 <template lang="html">
   <main class="main">
-    <Header></Header>
     <HeaderSection></HeaderSection>
     <div id="container" class="container__leaderboards container">
       <div class="row highLight">
@@ -23,17 +22,14 @@
           <div class="name">Player5</div><div class="score">495</div>
       </div>
     </div>
-    <Footer></Footer>
   </main>
 </template>
 
 <script>
-import Header from '@/components/header.vue'
 import HeaderSection  from '@/components/title-section.vue'
 import Footer  from '@/components/footer.vue'
 export default {
   components: {
-    Header,
     HeaderSection,
     Footer,
   }

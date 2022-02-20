@@ -1,6 +1,5 @@
 <template lang="html">
   <main class="main">
-    <Header></Header>
     <div class="container">
       <div class="row">
         <h1 class="title__musa" data-aos="zoom-out-down" data-aos-duration="3000">MVSA</h1>
@@ -11,23 +10,20 @@
     <Scene></scene>
     <div class="element__graphic--rev" :style="{ backgroundImage: `url(${require('@/assets/img/home09_bg.png')})` }"></div>
     <Content></Content>
-    <Footer></Footer>
   </main>
 </template>
 
 <script>
 // @ is an alias to /src
-import Header from '@/components/header.vue'
+// import Header from '@/components/header.vue'
 import HeaderSection  from '@/components/title-section.vue'
-import Footer  from '@/components/footer.vue'
+// import Footer  from '@/components/footer.vue'
 import Content  from '@/components/content.vue'
 import Scene  from '@/components/3dscene.vue'
 export default {
   components: {
-    Header,
     Scene,
     HeaderSection,
-    Footer,
     Content,
   }
 }

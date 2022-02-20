@@ -1,6 +1,5 @@
 <template lang="html">
   <main class="main">
-    <Header></Header>
     <div class="container__login">
       <form class="form__login" action="index.html" method="post">
         <input type="text" name="username" value="" placeholder="Username">
@@ -8,20 +7,14 @@
         <input type="submit" name="" value="Accedi">
       </form>
     </div>
-    <Footer></Footer>
   </main>
 </template>
 
 <script>
 
   // @ is an alias to /src
-  import Header from '@/components/header.vue'
   import Footer  from '@/components/footer.vue'
   export default {
-    components: {
-      Header,
-      Footer,
-    }
   }
 </script>
 
