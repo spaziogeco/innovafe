@@ -2,7 +2,7 @@
   <main class="main">
     <div class="container">
       <div class="row">
-        <h1 class="title__musa" data-aos="zoom-out-down" data-aos-duration="3000">MVSA</h1>
+        <h1 class="title__musa" data-aos="zoom-out-down" data-aos-duration="3000">CIAO</h1>
       </div>
     </div>
     <HeaderSection></HeaderSection>
