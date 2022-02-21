@@ -7,7 +7,7 @@
     </div>
     <HeaderSection></HeaderSection>
     <div class="element__graphic" :style="{ backgroundImage: `url(${require('@/assets/img/home09_bg.png')})` }"></div>
-    <Scene></scene>
+    <Scene></Scene>
     <div class="element__graphic--rev" :style="{ backgroundImage: `url(${require('@/assets/img/home09_bg.png')})` }"></div>
     <Content></Content>
   </main>
