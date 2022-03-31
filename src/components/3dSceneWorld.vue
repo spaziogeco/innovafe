@@ -22,6 +22,7 @@ export default {
     const renderer =  new THREE.WebGLRenderer({ alpha: true, antialias: true});
     const controls = new OrbitControls( camera, renderer.domElement );
     controls.enableZoom = false;
+    // controls.update();
 
     // const containerWidth = $(container).offsetWidth;
     // const containerHeight = $(container).offsetHeight;
@@ -31,18 +32,42 @@ export default {
     // renderer.setSize($(container).width(), $(container).height());
     renderer.setPixelRatio(window.devicePixelRatio);
     container.appendChild( renderer.domElement );
-    const material = new THREE.MeshPhongMaterial()
+    // const material = new THREE.MeshPhongMaterial()
     //create a sphere
+
+    const near = 1.2;
+const far = 2;
+const color = 'white';
+scene.fog = new THREE.Fog(color, near, far);
+scene.background = new THREE.Color(color);
 
     const sphere = new THREE.Mesh(
       new THREE.SphereGeometry(1, 60, 60),
       new THREE.MeshBasicMaterial({
         // color: 0xFF0000
         map: new THREE.TextureLoader().load('8081_earthmap10k.jpg'),
+        // side: THREE.DoubleSide,
+        depthTest: false,
+        // side: THREE.BackSide,
+        // wireframe: true
         // bumpMap: new THREE.TextureLoader().load('8081_earthmap10k.jpg'),
         // bumpScale: 0.015
       })
     );
+
+    const light = new THREE.HemisphereLight( 0xffffbb, 0x080820, 1 );
+    scene.add( light );
+
+    // const sphere2 = new THREE.Mesh(
+    //   new THREE.SphereGeometry(1, 60, 60),
+    //   new THREE.MeshBasicMaterial({
+    //     // color:0xFF2D00,
+    //     map: new THREE.TextureLoader().load('8081_earthmap10k.jpg'),
+    //     depthTest: false,
+    //     side: THREE.FrontSide,
+    //   })
+    // );
+    //   scene.add( sphere2 );
 
     // const mesh = new THREE.Mesh(
     //   new THREE.SphereBufferGeometry(0.009,20,20),
@@ -154,18 +179,13 @@ export default {
       // //loader-model
       // const loader = new GLTFLoader();
       // // Load a glTF resource
-      // loader.load( 'plane.glb', function ( gltf ) {
-      // loader.position.set(pos.x,pos.y,pos.z)
-      // scene.add( gltf.scene );
+      // loader.load( 'poit-gps.gltf', function ( gltf ) {
+      //   gltf.scene.scale.set(10, 10, 10);
+      //   gltf.scene.position.set(pos.x,pos.y,pos.z)
+      //   gltf.scene.lookAt(0,90,0)
+      // 	scene.add( gltf.scene );
       //
       // });
-      const sphere2 = new THREE.Mesh(
-        new THREE.SphereGeometry(0.5, 60, 60),
-        new THREE.MeshBasicMaterial({
-          color: 0xFF0000
-        })
-      );
-      scene.add( sphere2 );
       const map = new THREE.TextureLoader().load( 'GPS-PNG-Clipart2.png' );
       const material = new THREE.SpriteMaterial( { map: map} );
       const sprite = new THREE.Sprite( material )
@@ -173,32 +193,34 @@ export default {
       // let center = new THREE.Vector3();
       // sprite.lookAt(center)
       sprite.scale.set( 0.1, 0.25, 0.1 );
+      sprite.renderOrder = 1
       // sprite.pivot = new THREE.Vector2(0.5, 1) // 50%, 100% pivot at center bottom
       scene.add( sprite );
 
       const mesh = new THREE.Mesh(
-        new THREE.SphereBufferGeometry(players,20,20),
-        // new THREE.PlaneGeometry(0.1,0.1),
+        // new THREE.SphereBufferGeometry(players,20,20),
+        new THREE.PlaneGeometry(0.1,0.2),
         new THREE.MeshBasicMaterial({
-          color:0xff0000,
-          side: THREE.DoubleSide,
-          // map: new THREE.TextureLoader().load('GPS-PNG-Clipart.png'),
-          transparent: true
+          // color:0xff0000,
+          // side: THREE.DoubleSide,
+          map: new THREE.TextureLoader().load('GPS-PNG-Clipart2.png'),
+          transparent: true,
+          // depthTest: false
         })
       )
       // let center = new THREE.Vector3();
       //
       sprite.position.set(pos.x,pos.y,pos.z)
+      mesh.position.set(pos.x,pos.y,pos.z)
       // mesh.updateWorldMatrix(true, false);
       // mesh.getWorldPosition(center);
-      mesh.lookAt(0,0,0)
-      mesh.lookAt(0,0,0)
+      mesh.lookAt(0,90,0)
 
       // mesh.rotation.set(new THREE.Vector3( 0, 0, Math.PI / 2));
       // mesh.applyMatrix( new THREE.Matrix4().makeTranslation( 0, 0, 0.05 ) );
       // mesh.up = new THREE.Vector3(0,0,1);
 
-      scene.add(mesh)
+      // scene.add(mesh)
     }
 
 
@@ -224,7 +246,6 @@ export default {
     const group = new THREE.Group()
     group.add(sphere)
     scene.add(group)
-
     camera.position.z = 2;
 
     const mouse = {
@@ -234,6 +255,8 @@ export default {
 
     function animate() {
       requestAnimationFrame(animate)
+      // controls.update();
+
       renderer.render(scene, camera)
       // sphere.rotation.y += 0.003
       // gsap.to(group.rotation, {
@@ -245,11 +268,12 @@ export default {
     animate();
 
 
-    // addEventListener('mousemove' , () => {
-    //   mouse.x = (event.clientX / innerWidth) * 2 - 1
-    //   mouse.y = -(event.clientY / innerHeight) * 2 + 1
-    //   // console.log(mouse)
-    // });
+    addEventListener('mousemove' , () => {
+      // console.log(controls)
+      // mouse.x = (event.clientX / innerWidth) * 2 - 1
+      // mouse.y = -(event.clientY / innerHeight) * 2 + 1
+      // console.log(mouse)
+    });
 
 
 

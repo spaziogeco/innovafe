@@ -84,6 +84,7 @@ body * {
   display:block;
   background:#fff;
   margin-left:auto;
+  overflow: hidden;
 }
 .menu-game {
   max-width:315px;
