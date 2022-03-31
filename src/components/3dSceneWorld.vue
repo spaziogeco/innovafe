@@ -154,13 +154,13 @@ export default {
         })
       );
       scene.add( sphere2 );
-      const map = new THREE.TextureLoader().load( 'GPS-PNG-Clipart.png' );
+      const map = new THREE.TextureLoader().load( 'GPS-PNG-Clipart2.png' );
       const material = new THREE.SpriteMaterial( { map: map} );
       const sprite = new THREE.Sprite( material )
       // sprite.material.rotation = 4 * Math.PI * pos.z;
       let center = new THREE.Vector3();
       sprite.lookAt(center)
-      sprite.scale.set( 0.1, 0.1, 0.1 );
+      sprite.scale.set( 0.1, 0.2, 0.1 );
       // sprite.pivot = new THREE.Vector2(0.5, 1) // 50%, 100% pivot at center bottom
       scene.add( sprite );
 
