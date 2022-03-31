@@ -111,6 +111,18 @@ export default {
         players: 36,
         lat: -26.195246,
         lng: 28.034088
+      },
+      {
+        name: 'Sicilia',
+        players: 12,
+        lat: 37.75,
+        lng: 14.25
+      },
+      {
+        name: 'Malaga',
+        players: 42,
+        lat: 36.721261,
+        lng: -4.4212655
       }
     ]
 
@@ -158,9 +170,9 @@ export default {
       const material = new THREE.SpriteMaterial( { map: map} );
       const sprite = new THREE.Sprite( material )
       // sprite.material.rotation = 4 * Math.PI * pos.z;
-      let center = new THREE.Vector3();
-      sprite.lookAt(center)
-      sprite.scale.set( 0.1, 0.2, 0.1 );
+      // let center = new THREE.Vector3();
+      // sprite.lookAt(center)
+      sprite.scale.set( 0.1, 0.25, 0.1 );
       // sprite.pivot = new THREE.Vector2(0.5, 1) // 50%, 100% pivot at center bottom
       scene.add( sprite );
 
