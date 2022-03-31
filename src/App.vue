@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-    <Header></Header>
-    <BgAnimation></BgAnimation>
+    <!-- <Header></Header>
+    <BgAnimation></BgAnimation> -->
     <router-view/>
-    <Footer></Footer>
+    <!-- <Footer></Footer> -->
   </div>
 </template>
 
@@ -186,16 +186,16 @@ body .mouse-center {
 
 </style>
 <script>
-import BgAnimation from '@/components/bg-animation.vue'
-import Header from '@/components/header.vue'
-import Footer  from '@/components/footer.vue'
+// import BgAnimation from '@/components/bg-animation.vue'
+// import Header from '@/components/header.vue'
+// import Footer  from '@/components/footer.vue'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 export default {
   components: {
-    Header,
-    Footer,
-    BgAnimation
+    // Header,
+    // Footer,
+    // BgAnimation
   },
   mounted () {
     AOS.init();
